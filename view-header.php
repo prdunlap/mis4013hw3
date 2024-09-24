@@ -19,16 +19,13 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="post.php">Post</a>
+          <a class="nav-link" href="book.php">Books</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="post-result.php">Result</a>
+          <a class="nav-link" href="loan.php">Loans</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="get.php">Get</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="get-result.php">Get Result</a>
+          <a class="nav-link" href="books-on-loan.php">Books on Loan</a>
         </li>
       </ul>
     </div>
