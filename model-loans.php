@@ -6,7 +6,9 @@ function selectLoans() {
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
-    
+
+
+        
         return $result;
     } catch (Exception $e) {
         $conn->close();
