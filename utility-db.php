@@ -1,7 +1,7 @@
 <?php
 function get_db_connection(){
     // Create connection
-    $conn = new mysqli('129.15.65.247', 'PrestonDunlap', 'Memorial21!', 'mis4013-db');
+    $conn = new mysqli('129.15.65.247', 'PrestonDunlap', 'Dunlap57', 'mis4013-db');
 
 
     // Check connection
