@@ -11,8 +11,9 @@
     
     </thead>
     <tbody>
-      $loans = selectLoans();
+     
       <?php
+ $loans = selectLoans();
 while ($loan = $loans->fetch_assoc()) {
 ?> 
   <tr>
