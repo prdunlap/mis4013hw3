@@ -22,7 +22,7 @@
           <a class="nav-link" href="book.php">Books</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="loan.php">Loans</a>
+          <a class="nav-link" href="loans.php">Loans</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="books-on-loan.php">Books on Loan</a>
