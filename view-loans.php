@@ -11,7 +11,7 @@
     </thead>
     <tbody>  
 <?php
-while ($loan = $loan->fetch_assoc()) {
+while ($loan = $loans->fetch_assoc()) {
 ?> 
   <tr>
     <td><?php echo $loan['LID']; ?></td>
