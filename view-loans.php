@@ -13,14 +13,13 @@
     <tbody>
      
       <?php
- $loans = selectLoans();
 while ($loan = $loans->fetch_assoc()) {
 ?> 
   <tr>
-    <td><?php echo $loan['loan_lid'];?></td>
-    <td><?php echo $loan['loan_BorrowerID'];?></td>
-    <td><?php echo $loan['loan_CheckoutDate'];?></td>
-    <td><?php echo $loan['loan_DueDate'];?></td>
+    <td><?php echo $loan['loan_LID']; ?></td>
+    <td><?php echo $loan['loan_BorrowerID']; ?></td>
+    <td><?php echo $loan['loan_CheckoutDate']; ?></td>
+    <td><?php echo $loan['loan_DueDate']; ?></td>
   </tr>
       <?php 
   
