@@ -8,23 +8,20 @@
     <th>CheckoutDate</th>
     <th>DueDate</th>
       </tr>
-    
     </thead>
-    <tbody>
-     
-      <?php
+    <tbody>  
+<?php
 while ($loan = $loans->fetch_assoc()) {
 ?> 
   <tr>
-    <td><?php echo $loan['loan_LID']; ?></td>
-    <td><?php echo $loan['loan_BorrowerID']; ?></td>
-    <td><?php echo $loan['loan_CheckoutDate']; ?></td>
-    <td><?php echo $loan['loan_DueDate']; ?></td>
+    <td><?php echo $loan['LID']; ?></td>
+    <td><?php echo $loan['BorrowerID']; ?></td>
+    <td><?php echo $loan['CheckoutDate']; ?></td>
+    <td><?php echo $loan['DueDate']; ?></td>
   </tr>
-      <?php 
-  
+<?php 
 }
-      ?>
+?>
     </tbody>
   </table>
 </div>
