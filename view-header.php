@@ -19,7 +19,7 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="book.php">Books</a>
+          <a class="nav-link" href="authors.php">Authors</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="loans.php">Loans</a>
