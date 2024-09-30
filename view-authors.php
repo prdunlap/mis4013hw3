@@ -16,15 +16,15 @@
 $sql = "SELECT AID, FName, LName, Suffix, DOB, Country_of_Origin FROM 'author'";
 
 $authors = $conn->query($sql);
-while ($authors = $authors->fetch_assoc()) {
+while ($author = $authors->fetch_assoc()) {
 ?> 
   <tr>
-    <td><?php echo $authors['AID']; ?></td>
-    <td><?php echo $authors['FName']; ?></td>
-    <td><?php echo $authors['LName']; ?></td>
-    <td><?php echo $authors['Suffix']; ?></td>
-    <td><?php echo $authors['DOB']; ?></td>
-    <td><?php echo $authors['Country_of_Origin']; ?></td>
+    <td><?php echo $author['AID']; ?></td>
+    <td><?php echo $author['FName']; ?></td>
+    <td><?php echo $author['LName']; ?></td>
+    <td><?php echo $author['Suffix']; ?></td>
+    <td><?php echo $author['DOB']; ?></td>
+    <td><?php echo $author['Country_of_Origin']; ?></td>
   </tr>
 <?php 
 }
