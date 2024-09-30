@@ -1,8 +1,8 @@
 <?php
-function selectAuthors() {
+function selectBorrowers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT AID, FName, LName, Suffix, DOB, Country_of_Origin FROM 'author'");
+        $stmt = $conn->prepare("SELECT BorrowerID, FName, LName, DOB, email, phone FROM 'borrower'");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
