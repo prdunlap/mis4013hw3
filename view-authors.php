@@ -16,7 +16,7 @@
 $sql = "SELECT AID, FName, LName, Suffix, DOB, Country_of_Origin FROM 'author'";
 
 $loans = $conn->query($sql);
-while ($loan = $loans->fetch_assoc()) {
+while ($loan = $authors->fetch_assoc()) {
 ?> 
   <tr>
     <td><?php echo $authors['AID']; ?></td>
