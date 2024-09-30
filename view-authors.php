@@ -1,4 +1,4 @@
-<h1>Loans</h1>
+<h1>Authors</h1>
 <div class="table-responsive">
   <table class="table">
     <thead> 
