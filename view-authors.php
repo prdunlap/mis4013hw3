@@ -7,15 +7,12 @@
     <th>First Name</th>
     <th>Last Name</th>
     <th>Suffix</th>
-      <th>DOB</th>
-      <th>Country of Origin</th>
+    <th>DOB</th>
+    <th>Country of Origin</th>
       </tr>
     </thead>
     <tbody>  
 <?php
-$sql = "SELECT AID, FName, LName, Suffix, DOB, Country_of_Origin FROM 'author'";
-
-$authors = $conn->query($sql);
 while ($author = $authors->fetch_assoc()) {
 ?> 
   <tr>
