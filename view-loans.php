@@ -7,6 +7,7 @@
     <th>BorrowerID</th>
     <th>CheckoutDate</th>
     <th>DueDate</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>  
@@ -21,6 +22,7 @@ while ($loan = $loans->fetch_assoc()) {
     <td><?php echo $loan['BorrowerID']; ?></td>
     <td><?php echo $loan['CheckoutDate']; ?></td>
     <td><?php echo $loan['DueDate']; ?></td>
+    <td><a href="loans-by-borrower.php?id=<?php echo $loan['loan_LID']; ?>"></a>Borrowers</td>
   </tr>
 <?php 
 }
