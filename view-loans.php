@@ -12,7 +12,7 @@
     <tbody>  
 <?php
 $sql = "SELECT LID, BorrowerID, CheckoutDate, DueDate FROM loans";
-
+include "model-loans.php";
 $loans = $conn->query($sql);
 while ($loan = $loans->fetch_assoc()) {
 ?> 
