@@ -1,27 +1,27 @@
-<h1>Authors</h1>
+<h1>Borrowers</h1>
 <div class="table-responsive">
   <table class="table">
     <thead> 
       <tr>
-    <th>AID</th>
+    <th>BorrowerID</th>
     <th>First Name</th>
     <th>Last Name</th>
-    <th>Suffix</th>
     <th>DOB</th>
-    <th>Country of Origin</th>
+    <th>email</th>
+    <th>phone</th>
       </tr>
     </thead>
     <tbody>  
 <?php
-while ($author = $authors->fetch_assoc()) {
+while ($borrower = $borrowers->fetch_assoc()) {
 ?> 
   <tr>
-    <td><?php echo $author['AID']; ?></td>
+    <td><?php echo $borrower['BorrowerID']; ?></td>
     <td><?php echo $author['FName']; ?></td>
     <td><?php echo $author['LName']; ?></td>
-    <td><?php echo $author['Suffix']; ?></td>
     <td><?php echo $author['DOB']; ?></td>
-    <td><?php echo $author['Country_of_Origin']; ?></td>
+    <td><?php echo $author['email']; ?></td>
+    <td><?php echo $author['phone']; ?></td>
   </tr>
 <?php 
 }
