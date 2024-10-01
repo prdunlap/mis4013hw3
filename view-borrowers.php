@@ -22,6 +22,9 @@ while ($borrower = $borrowers->fetch_assoc()) {
     <td><?php echo $borrower['DOB']; ?></td>
     <td><?php echo $borrower['Email']; ?></td>
     <td><?php echo $borrower['Phone #']; ?></td>
+    <form>
+      <button type="submit" class="btn btn-primary">Borrower</button>
+    </form>
   </tr>
 <?php 
 }
