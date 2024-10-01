@@ -13,15 +13,15 @@
     </thead>
     <tbody>  
 <?php
-while ($borrower = $borrowers->fetch_assoc()) {
+while (loansby = $loansby->fetch_assoc()) {
 ?> 
   <tr>
-    <td><?php echo $loan['LID']; ?></td>
-    <td><?php echo $borrower['BorrowerID']; ?></td>
-    <td><?php echo $loan['CheckoutDate']; ?></td>
-    <td><?php echo $loan['DueDate']; ?></td>
-    <td><?php echo $borrower['FName']; ?></td>
-    <td><?php echo $borrower['LName']; ?></td>
+    <td><?php echo $loansby['LID']; ?></td>
+    <td><?php echo $loansby['BorrowerID']; ?></td>
+    <td><?php echo $loansby['CheckoutDate']; ?></td>
+    <td><?php echo $loansby['DueDate']; ?></td>
+    <td><?php echo $loansby['FName']; ?></td>
+    <td><?php echo $loansby['LName']; ?></td>
   </tr>
 <?php 
 }
