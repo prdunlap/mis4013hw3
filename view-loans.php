@@ -7,7 +7,7 @@
     <th>BorrowerID</th>
     <th>CheckoutDate</th>
     <th>DueDate</th>
-        <th></th>
+    <th>Borrower</th>
       </tr>
     </thead>
     <tbody>  
