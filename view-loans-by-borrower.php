@@ -16,12 +16,12 @@
 while ($borrower = $borrowers->fetch_assoc()) {
 ?> 
   <tr>
+    <td><?php echo $loan['LID']; ?></td>
     <td><?php echo $borrower['BorrowerID']; ?></td>
+    <td><?php echo $loan['CheckoutDate']; ?></td>
+    <td><?php echo $loan['DueDate']; ?></td>
     <td><?php echo $borrower['FName']; ?></td>
     <td><?php echo $borrower['LName']; ?></td>
-    <td><?php echo $borrower['DOB']; ?></td>
-    <td><?php echo $borrower['email']; ?></td>
-    <td><?php echo $borrower['phone']; ?></td>
   </tr>
 <?php 
 }
