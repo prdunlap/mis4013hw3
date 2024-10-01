@@ -25,7 +25,7 @@
           <a class="nav-link" href="loans.php">Loans</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="books-on-loan.php">Books on Loan</a>
+          <a class="nav-link" href="loans-by-borrower.php">Books on Loan</a>
         </li>
       </ul>
     </div>
