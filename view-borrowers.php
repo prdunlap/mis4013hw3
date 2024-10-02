@@ -21,9 +21,7 @@ while ($borrower = $borrowers->fetch_assoc()) {
     <td><?php echo $borrower['LName']; ?></td>
     <td><?php echo $borrower['DOB']; ?></td>
     <td><?php echo $borrower['email']; ?></td>
-    <td><?php echo $borrower['phone']; ?></td>
-  
-    
+    <td><?php echo $borrower['phone']; ?></td> 
   </tr>
 <?php 
 }
