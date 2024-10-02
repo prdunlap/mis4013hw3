@@ -1,6 +1,6 @@
 <?php
-function selectLoans() {
-    try {
+function selectLoans() 
+     {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT LID, BorrowerID, CheckoutDate, DueDate FROM loan");
         $stmt->execute();
