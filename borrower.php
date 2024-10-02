@@ -4,7 +4,7 @@ require_once("model-borrower.php");
 
 $pageTitle = "Borrowers";
 include "view-header.php";
-include "view-borrowers.php";
 $borrowers = selectBorrowers();
+include "view-borrowers.php";
 include "view-footer.php";
 ?>
