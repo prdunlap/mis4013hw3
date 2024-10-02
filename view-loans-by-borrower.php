@@ -13,7 +13,7 @@
     </thead>
     <tbody>  
 <?php
-while (loanby=$loansby->fetch_assoc()) {
+while ($loanby = $loansby->fetch_assoc()) {
 ?> 
   <tr>
     <td><?php echo $loansby['LID']; ?></td>
