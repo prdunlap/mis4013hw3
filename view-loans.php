@@ -12,6 +12,7 @@
     </thead>
     <tbody>  
 <?php
+include "model-loans-by-borrower.php";
 while ($loan = $loans->fetch_assoc()) {
 ?> 
   <tr>
