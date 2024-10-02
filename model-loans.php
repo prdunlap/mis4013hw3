@@ -8,10 +8,7 @@ function selectLoans() {
         $conn->close();
         
         return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
+
 }
 
 
