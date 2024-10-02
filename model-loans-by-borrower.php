@@ -9,4 +9,5 @@ function selectLoansByBorrower($lid) {
         $conn->close();
         
         return $result;
+}
 ?>
