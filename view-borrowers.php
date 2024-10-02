@@ -22,7 +22,8 @@ while ($borrower = $borrowers->fetch_assoc()) {
     <td><?php echo $borrower['DOB']; ?></td>
     <td><?php echo $borrower['Email']; ?></td>
     <td><?php echo $borrower['Phone #']; ?></td>
-    <form>
+    <form method="post" action="loans-by-borrower.php">
+      <input type ="hidden" name="lid" value="<?php echo $loan[loan_lid]; ?>">
       <button type="submit" class="btn btn-primary">Borrower</button>
     </form>
   </tr>
