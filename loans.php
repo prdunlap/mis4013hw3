@@ -4,7 +4,7 @@ require_once("model-loans.php");
 
 $pageTitle = "Loans";
 include "view-header.php";
-include "view-loans.php";
 $loans = selectLoans();
+include "view-loans.php";
 include "view-footer.php";
 ?>
