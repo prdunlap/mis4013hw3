@@ -14,6 +14,7 @@ while ($loan = $loans->fetch_assoc()) {
     $loans = selectLoansByBorrower($loan['LID']);
   while ($loan = $loans->fetch_assoc()) {
     ?>
+     <li class="list-group-item"><?php echo $loanby['BorrowerID']; ?> - <?php echo $loanby['FName']; ?> <?php echo $loanby['LName']; ?> - <?php echo $loanby['DueDate']; ?></li>
 
         
 <?php 
