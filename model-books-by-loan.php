@@ -1,8 +1,8 @@
 <?php
-function selectCopiesByLoan($lid) {
+function selectBooksByLoan($lid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT loan.LID, loan.BorrowerID, loan.CheckoutDate, loan.DueDate, borrower.FName, borrower.LName FROM loan JOIN borrower ON loan.BorrowerID = borrower.BorrowerID=?");
+        $stmt = $conn->prepare("SELECT b.BID, l.LID, b.Title FROM book b JOIN loan l ON b.LID = l.LID=?");
          $stmt->bind_param("i", $lid);
         $stmt->execute();
         $result = $stmt->get_result();
