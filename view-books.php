@@ -7,7 +7,7 @@
     <th>Genre ID</th>
     <th>Title</th>
     <th>Publication Date</th>
-    <th>Loan IDe</th>
+    <th>Loan ID</th>
       </tr>
     </thead>
     <tbody>  
