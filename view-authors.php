@@ -9,6 +9,7 @@
     <th>Suffix</th>
     <th>DOB</th>
     <th>Country of Origin</th>
+        <th>Author's Works</th>
       </tr>
     </thead>
     <tbody>  
@@ -22,6 +23,7 @@ while ($author = $authors->fetch_assoc()) {
     <td><?php echo $author['Suffix']; ?></td>
     <td><?php echo $author['DOB']; ?></td>
     <td><?php echo $author['Country_of_Origin']; ?></td>
+  <td><a href="author-information.php?aid=<?php echo $author['AID']; ?>">Books</a></td>
   </tr>
 <?php 
 }
