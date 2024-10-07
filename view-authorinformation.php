@@ -16,7 +16,7 @@
 while ($authorinfo = $authorsinfo->fetch_assoc()) {
 ?> 
   <tr>
-    <td><?php echo $authorinfo['AID']; ?></td>
+    <td><?php echo $authorinfo['aid']; ?></td>
     <td><?php echo $authorinfo['FName']; ?></td>
     <td><?php echo $authorinfo['LName']; ?></td>
     <td><?php echo $authorinfo['Suffix']; ?></td>
