@@ -1,4 +1,4 @@
-<h1>Loans</h1>
+<h1>Books</h1>
 <div class="table-responsive">
   <table class="table">
     <thead> 
@@ -12,7 +12,7 @@
     </thead>
     <tbody>  
 <?php
-include "model-loans-by-borrower.php";
+include "model-books.php";
 while ($book = $books->fetch_assoc()) {
 ?> 
   <tr>
