@@ -27,6 +27,7 @@ while ($author = $authors->fetch_assoc()) {
       <form action="author-information.php" method="POST">
         <input type="hidden" name="aid" value="<?php echo $author['AID']; ?>">
         <button type="submit">Books</button>    
+      </form>
   </td>
   </tr>
 <?php 
