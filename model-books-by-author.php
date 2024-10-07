@@ -7,11 +7,7 @@
       $result=$stmt->get_result();
       $conn->close();
       return $result;
-    } catch (Exception $e) {
-      $conn->close();
-      throw $e
-      
-    }
+    } 
 
     function selectAuthorsByBook() {
       try {
@@ -21,13 +17,6 @@
         $result=$stmt->get_result();
       $conn->close();
       return $result;
-      } catch (Exception $e) {
-      $conn->close();
-      throw $e
-    }
-    
-
-  }
-
-
+      } 
+        }
 ?>
