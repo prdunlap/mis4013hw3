@@ -1,6 +1,6 @@
 <h1>Author Books</h1>
 <?php
-while ($book = $books->fetch_assoc()) {
+while ($bookauthor = $bookauthors->fetch_assoc()) {
 ?>
   <div class="card">
     <div class="card-body">
