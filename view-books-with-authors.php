@@ -4,10 +4,10 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
 ?>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title"><td><?php echo $bookauthors['Title']; ?></td></h5>
+      <h5 class="card-title"><td><?php echo $bookauthor['Title']; ?></td></h5>
       <p class="card-text">
   <?php 
-      $bookauthors = selectAuthorsByBook($bookauthors['BID']);
+      $bookauthor = selectAuthorsByBook($bookauthors['BID']);
       while ($bookauthor = $bookauthors->fetch_assoc()) {
         ?>
         <td><?php echo $bookauthor['AID']; ?></td>
