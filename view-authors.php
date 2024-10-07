@@ -23,7 +23,11 @@ while ($author = $authors->fetch_assoc()) {
     <td><?php echo $author['Suffix']; ?></td>
     <td><?php echo $author['DOB']; ?></td>
     <td><?php echo $author['Country_of_Origin']; ?></td>
-  <td><a href="author-information.php?aid=<?php echo $author['AID']; ?>">Books</a></td>
+  <td>
+      <form action="author-information.php" method="POST">
+        <input type="hidden" name="aid" value="<?php echo $author['AID']; ?>">
+        <button type="submit">Books</button>    
+  </td>
   </tr>
 <?php 
 }
