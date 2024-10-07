@@ -20,7 +20,7 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
       }
   ?>
       </p>
-      <p class="card-text"><td>Publication Date: <?php echo $book['PubDate']; ?></td></p>
+      <p class="card-text"><td>Publication Date: <?php echo $bookauthor['PubDate']; ?></td></p>
     </div>
   </div>
 <?php 
