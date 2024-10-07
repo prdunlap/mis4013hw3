@@ -13,7 +13,6 @@
     </thead>
     <tbody>  
 <?php
-include "model-authors.php";
 while ($author = $authors->fetch_assoc()) {
 ?> 
   <tr>
