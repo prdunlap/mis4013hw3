@@ -7,7 +7,7 @@ while ($book = $books->fetch_assoc()) {
       <h5 class="card-title"><td><?php echo $book['Title']; ?></td></h5>
       <p class="card-text">
   <?php 
-      $bookauthors = selectBooksByAuthor($book['BID']);
+      $bookauthors = selectAuthorsByBook($book['BID']);
       while ($bookauthor = $bookauthors->fetch_assoc()) {
         ?>
         <td><?php echo $authorinfo['AID']; ?></td>
