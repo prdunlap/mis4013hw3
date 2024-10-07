@@ -4,10 +4,10 @@
     <thead> 
       <tr>
     <th>Book ID</th>
-    <th>Book Title</th>
-    <th>Author(s)</th>
     <th>Genre ID</th>
+    <th>Title</th>
     <th>Publication Date</th>
+    <th>Loan IDe</th>
       </tr>
     </thead>
     <tbody>  
@@ -17,10 +17,10 @@ while ($book = $books->fetch_assoc()) {
 ?> 
   <tr>
     <td><?php echo $book['BID']; ?></td>
-    <td><?php echo $book['BookTitle']; ?></td>
-    <td><?php echo $book['AID']; ?></td>
     <td><?php echo $book['GID']; ?></td>
+    <td><?php echo $book['Title']; ?></td>
     <td><?php echo $book['PubDate']; ?></td>
+    <td><?php echo $book['LID']; ?></td>
   </tr>
 <?php 
 }
