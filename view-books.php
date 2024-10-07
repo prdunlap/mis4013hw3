@@ -12,7 +12,6 @@
     </thead>
     <tbody>  
 <?php
-include "model-books.php";
 while ($book = $books->fetch_assoc()) {
 ?> 
   <tr>
