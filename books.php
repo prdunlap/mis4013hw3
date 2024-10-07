@@ -4,7 +4,7 @@ require_once("model-books.php");
 
 $pageTitle = "Books";
 include "view-header.php";
-$borrowers = selectBooks();
+$books = selectBooks();
 include "view-books.php";
 include "view-footer.php";
 ?>
