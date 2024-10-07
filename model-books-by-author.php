@@ -8,6 +8,7 @@
       $conn->close();
       return $result;
     } 
+      }
 
     function selectAuthorsByBook() {
       try {
