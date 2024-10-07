@@ -34,10 +34,10 @@
           <a class="nav-link" href="loans-by-borrower.php">Loan Information</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="loans-by-borrower.php">Author Information</a>
+          <a class="nav-link" href="author-information.php">Author Information</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="loans-by-borrower.php">Related Records</a>
+          <a class="nav-link" href="...">Related Records</a>
         </li>
       </ul>
     </div>
