@@ -37,7 +37,7 @@
           <a class="nav-link" href="author-information.php">Author Information</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="...">Related Records</a>
+          <a class="nav-link" href="books-with-authors.php">Book Information</a>
         </li>
       </ul>
     </div>
