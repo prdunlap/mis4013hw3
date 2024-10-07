@@ -10,7 +10,12 @@ while ($book = $books->fetch_assoc()) {
       $bookauthors = selectBooksByAuthor($book['BID']);
       while ($bookauthor = $bookauthors->fetch_assoc()) {
         ?>
-        
+        <td><?php echo $authorinfo['AID']; ?></td>
+    <td><?php echo $authorinfo['FName']; ?></td>
+    <td><?php echo $authorinfo['LName']; ?></td>
+    <td><?php echo $authorinfo['Suffix']; ?></td>
+    <td><?php echo $authorinfo['Title']; ?></td>
+    <td><?php echo $authorinfo['PubDate']; ?></td>
       <?php
       }
   ?>
