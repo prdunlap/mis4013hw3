@@ -25,6 +25,12 @@
           <a class="nav-link" href="loans.php">Loans</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="books.php">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="authors.php">Authors</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="loans-by-borrower.php">Books on Loan</a>
         </li>
       </ul>
