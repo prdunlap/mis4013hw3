@@ -2,7 +2,7 @@
   function selectBooks() {
      
         $conn = get_db_connection();
-      $stmt = $conn->prepare("SELECT FName, LName, Suffix, Country_of_Origin FROM author");
+      $stmt = $conn->prepare("SELECT Title, Pubdate FROM book");
       $stmt->execute();
       $result=$stmt->get_result();
       $conn->close();
