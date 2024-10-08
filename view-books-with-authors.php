@@ -18,7 +18,7 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
       <li class="list-group-item">Author FName - <?php echo $bookinfos['FName']; ?></li>
       <li class="list-group-item">Author LName - <?php echo $bookinfos['LName']; ?></li>
       <li class="list-group-item">Author Country of Origin - <?php echo $bookinfos['Country_of_Origin']; ?></li>
-      <li class="list-group-item">Publication Date - <?php echo $bookauthor['PubDate']; ?></li>
+      <li class="list-group-item">Publication Date - <?php echo $bookinfos['PubDate']; ?></li>
       <?php  
   }
   ?>
