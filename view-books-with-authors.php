@@ -4,7 +4,7 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
 ?>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title"><td><?php echo $bookauthor['book.Title']; ?></td></h5>
+      <h5 class="card-title"><td><?php echo $bookauthor['Title']; ?></td></h5>
       <p class="card-text">
   <?php 
       while ($bookauthor = $bookauthors->fetch_assoc()) {
@@ -12,14 +12,15 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
     <td><?php echo $bookauthor['FName']; ?></td>
     <td><?php echo $bookauthor['LName']; ?></td>
     <td><?php echo $bookauthor['Suffix']; ?></td>
-    <td><?php echo $bookauthor['book.PubDate']; ?></td>
+    <td><?php echo $bookauthor['PubDate']; ?></td>
       <?php
       }
   ?>
       </p>
       <p class="card-text"><td>Publication Date: <?php echo $bookauthor['book.PubDate']; ?></td></p>
     </div>
-  </div>
+
 <?php 
 }
-?>
+?>  
+</div>
