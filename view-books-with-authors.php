@@ -1,4 +1,5 @@
 <h1>Author Books</h1>
+<div class="card-group">
 <?php
 while ($bookauthor = $bookauthors->fetch_assoc()) {
 ?>
@@ -7,19 +8,17 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
       <h5 class="card-title"><td><?php echo $bookauthor['Title']; ?></td></h5>
       <p class="card-text">
   <?php 
-      while ($bookinformation = $bookauthors->fetch_assoc()) {
-        ?>
-    <td><?php echo $bookinformation['author.FName']; ?></td>
-    <td><?php echo $bookinformation['author.LName']; ?></td>
-    <td><?php echo $bookinformation['author.Suffix']; ?></td>
-    <td><?php echo $bookinformation['book.PubDate']; ?></td>
-      <?php
-      }
+      $bookinformation = selectAuthorsByBook($bookauthor['bid']);
+  while ($bookinformation = $bookinfos->fetch_assoc()) {
+    ?>
+
+      <?php  
+  }
   ?>
       </p>
-      <p class="card-text"><td>Publication Date: <?php echo $bookauthor['book.PubDate']; ?></td></p>
+      <p class="card-text"><td>Publication Date: <?php echo $bookinformation['book.PubDate']; ?></td></p>
     </div>
-
+  </div>
 <?php 
 }
 ?>  
