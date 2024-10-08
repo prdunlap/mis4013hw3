@@ -9,7 +9,7 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
       <p class="card-text">
    <ul class="list-group">
   <?php 
-      $bookinformation = selectAuthorsByBook($bookauthor['book.BID']);
+      $bookinformation = selectAuthorsByBook($bookauthor['b.BID']);
   while ($bookinfos = $bookinformation->fetch_assoc()) {
     ?>
    
@@ -24,7 +24,7 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
   ?>
   </ul>
       </p>
-      <p class="card-text">Publication Date: <?php echo $bookauthor['book.PubDate']; ?></p>
+      <p class="card-text">Publication Date: <?php echo $bookauthor['b.PubDate']; ?></p>
     </div>
   </div>
 <?php 
