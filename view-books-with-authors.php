@@ -13,11 +13,11 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
   while ($bookinfos = $bookinformation->fetch_assoc()) {
     ?>
    
-      <li class="list-group-item">Book ID: <?php echo $bookinfos['book.BID']; ?></li>
-      <li class="list-group-item">Genre ID: <?php echo $bookinfos['book.GID']; ?></li>
-      <li class="list-group-item">Author FName: <?php echo $bookinfos['author.FName']; ?></li>
-      <li class="list-group-item">Author LName: <?php echo $bookinfos['author.LName']; ?></li>
-      <li class="list-group-item">Author Country of Origin: <?php echo $bookinfos['author.Country_of_Origin']; ?></li>
+      <li class="list-group-item">Book ID: <?php echo $bookinfos['BID']; ?></li>
+      <li class="list-group-item">Genre ID: <?php echo $bookinfos['GID']; ?></li>
+      <li class="list-group-item">Author FName: <?php echo $bookinfos['FName']; ?></li>
+      <li class="list-group-item">Author LName: <?php echo $bookinfos['LName']; ?></li>
+      <li class="list-group-item">Author Country of Origin: <?php echo $bookinfos['Country_of_Origin']; ?></li>
 
       <?php  
   }
