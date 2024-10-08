@@ -7,12 +7,12 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
       <h5 class="card-title"><td><?php echo $bookauthor['Title']; ?></td></h5>
       <p class="card-text">
   <?php 
-      while ($bookauthor = $bookauthors->fetch_assoc()) {
+      while ($bookinformation = $bookauthors->fetch_assoc()) {
         ?>
-    <td><?php echo $bookauthor['FName']; ?></td>
-    <td><?php echo $bookauthor['LName']; ?></td>
-    <td><?php echo $bookauthor['Suffix']; ?></td>
-    <td><?php echo $bookauthor['PubDate']; ?></td>
+    <td><?php echo $bookinformation['author.FName']; ?></td>
+    <td><?php echo $bookinformation['author.LName']; ?></td>
+    <td><?php echo $bookinformation['author.Suffix']; ?></td>
+    <td><?php echo $bookinformation['book.PubDate']; ?></td>
       <?php
       }
   ?>
