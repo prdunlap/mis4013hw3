@@ -15,7 +15,7 @@ function insertBooks($bGID, $bTitle, $bPubDate, $bLID)
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO book (GID, Title, Pubdate, LID) VALUES (?,?,?,?)");
-        $stmt->bind_param("isdi",$bGID, $bTitle, $bPubDate, $bLID);
+        $stmt->bind_param("issi",$bGID, $bTitle, $bPubDate, $bLID);
         $success = $stmt->execute();
         $conn->close();
         
