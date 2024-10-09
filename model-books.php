@@ -23,5 +23,27 @@ function insertBooks($bGID, $bTitle, $bPubDate, $bLID)
 
 }
 
+function updateBooks($bGID, $bTitle, $bPubDate, $bLID, $bBID) 
+     {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE book SET GID = ?, Title = ?, Pubdate = ?, LID = ? WHERE BID = ?)");
+        $stmt->bind_param("issi",$bGID, $bTitle, $bPubDate, $bLID, $bBID);
+        $success = $stmt->execute();
+        $conn->close();
+        
+        return $success;
+
+}
+function deleteBooks($BID) 
+     {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("DELETE from book WHERE BID = ?");
+        $stmt->bind_param("i",$BID);
+        $success = $stmt->execute();
+        $conn->close();
+        
+        return $success;
+
+}
 
 ?>
