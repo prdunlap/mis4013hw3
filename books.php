@@ -8,7 +8,7 @@ include "view-header.php";
 if (isset($_POST['actionType')) {
   switch ($_POST['actionType']) {
     case "Add":
-      insertBooks($_POST['GID'], $_POST['bookTitle'], $_POST['pubDate'], $_POST['LID']);
+      insertBooks($_POST['GID'], $_POST['Title'], $_POST['pubDate'], $_POST['LID']);
       break;
   }
 }
