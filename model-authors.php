@@ -14,7 +14,7 @@ function insertAuthors($aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin)
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO author (FName, LName, Suffix, DOB, Country_of_Origin) VALUES (?,?,?,?,?)");
-        $stmt->bind_param("sssds",$aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin);
+        $stmt->bind_param("sssss",$aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin);
         $success = $stmt->execute();
         $conn->close();
         
@@ -26,7 +26,7 @@ function updateBorrowers($aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin)
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE author SET FName = ?, LName = ?, Suffix = ?, DOB = ?, Country_of_Origin = ? WHERE AID = ?)");
-        $stmt->bind_param("sssds",$aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin);
+        $stmt->bind_param("sssss",$aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin);
         $success = $stmt->execute();
         $conn->close();
         
