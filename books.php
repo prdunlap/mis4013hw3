@@ -8,15 +8,12 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      insertBooks($_POST['GID'], $_POST['Title'], $_POST['pubDate'], $_POST['LID']);
+    if (insertBooks($_POST['GID'], $_POST['Title'], $_POST['pubDate'], $_POST['LID'])); {
     echo '<div class="alert alert-success" role="alert">
-  Book Added </div>';
-  }
-  else {
-  echo '<div class="alert alert-danger" role="alert">
-  Error
-</div>'
-  }
+  Book Added </div>';}
+} else {
+  echo '<div class="alert alert-danger" role="alert">Error</div>'
+    }
       break;
   }
 }
