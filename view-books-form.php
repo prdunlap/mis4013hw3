@@ -16,10 +16,6 @@
       <div class="modal-body">
           <form method="post" action="">
             <div class="mb-3">
-              <label for="BID" class="form-label">Book ID</label>
-              <input type="integer" class="form-control" id="BID" name="BID">
-            </div>
-            <div class="mb-3">
               <label for="genreID" class="form-label">Genre ID</label>
               <input type="integer" class="form-control" id="genreID" name="genreID">
             </div>
