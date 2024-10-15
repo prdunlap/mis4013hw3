@@ -31,6 +31,10 @@
               <label for="DOB" class="form-label">Date of Birth</label>
               <input type="date" class="form-control" id="DOB" name="DOB">
             </div>
+            <div class="mb-3">
+              <label for="Country_of_Origin" class="form-label">Country of Origin</label>
+              <input type="text" class="form-control" id="Country_of_Origin" name="Country_of_Origin">
+            </div>
             <input type="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
           </form>
