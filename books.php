@@ -10,7 +10,7 @@ if (isset($_POST['actionType'])) {
     case "Add":
     if (insertBooks($_POST['GID'], $_POST['Title'], $_POST['pubDate'], $_POST['LID'])); {
     echo '<div class="alert alert-success" role="alert">
-  Book Added </div>';}
+  Book Added </div>';
 } else {
   echo '<div class="alert alert-danger" role="alert">Error</div>'
     }
