@@ -16,20 +16,20 @@
       <div class="modal-body">
           <form method="post" action="">
             <div class="mb-3">
-              <label for="genreID" class="form-label">Genre ID</label>
-              <input type="integer" class="form-control" id="genreID" name="genreID">
+              <label for="GID" class="form-label">Genre ID</label>
+              <input type="integer" class="form-control" id="GID" name="GID">
             </div>
             <div class="mb-3">
-              <label for="bookTitle" class="form-label">Book Title</label>
-              <input type="text" class="form-control" id="bookTitle" name="bookTitle">
+              <label for="Title" class="form-label">Book Title</label>
+              <input type="text" class="form-control" id="Title" name="Title">
             </div>
             <div class="mb-3">
               <label for="pubDate" class="form-label">Publication Date</label>
               <input type="date" class="form-control" id="pubDate" name="pubDate">
             </div>
             <div class="mb-3">
-              <label for="loanID" class="form-label">Loan ID</label>
-              <input type="integer" class="form-control" id="loanID" name="loanID">
+              <label for="LID" class="form-label">Loan ID</label>
+              <input type="integer" class="form-control" id="LID" name="LID">
             </div>
             <input type="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
