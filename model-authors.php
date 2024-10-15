@@ -10,5 +10,39 @@ function selectAuthors() {
         return $result;
 }
 
+function insertAuthors($aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin) 
+     {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO author (FName, LName, Suffix, DOB, Country_of_Origin) VALUES (?,?,?,?,?)");
+        $stmt->bind_param("sssds",$aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin);
+        $success = $stmt->execute();
+        $conn->close();
+        
+        return $success;
+
+}
+
+function updateBorrowers($aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin) 
+     {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE author SET FName = ?, LName = ?, Suffix = ?, DOB = ?, Country_of_Origin = ? WHERE AID = ?)");
+        $stmt->bind_param("sssds",$aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin);
+        $success = $stmt->execute();
+        $conn->close();
+        
+        return $success;
+
+}
+function deleteBorrowers($AID) 
+     {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("DELETE from author WHERE AID = ?");
+        $stmt->bind_param("i",$AID);
+        $success = $stmt->execute();
+        $conn->close();
+        
+        return $success;
+
+}
 
 ?>
