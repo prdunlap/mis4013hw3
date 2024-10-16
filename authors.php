@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])) {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
     case "Delete":
-    if (insertAuthors($_POST['AID'])) {
+    if (deleteAuthors($_POST['AID'])) {
     echo '<div class="alert alert-success" role="alert">
   Author Deleted </div>';
 } else {
