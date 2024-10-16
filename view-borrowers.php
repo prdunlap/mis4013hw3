@@ -1,4 +1,11 @@
-<h1>Borrowers</h1>
+<div class="row">
+  <div class="col"><h1>Borrowers</h1></div>
+  <div class="col-auto">
+   <?php 
+include "view-borrowers-form.php";
+?>
+  </div> 
+</div>
 <div class="table-responsive">
   <table class="table">
     <thead> 
