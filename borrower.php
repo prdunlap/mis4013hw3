@@ -10,14 +10,14 @@ if (isset($_POST['actionType'])) {
     case "Add":
     if (insertBorrowers($_POST['FName'], $_POST['LName'], $_POST['DOB'], $_POST['email'], $_POST['phone'])) {
     echo '<div class="alert alert-success" role="alert">
-  Author Added </div>';
+  Borrower Added </div>';
 } else {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
     case "Delete":
-    if (deleteAuthors($_POST['BorrowerID'])) {
+    if (deleteBorrowers($_POST['BorrowerID'])) {
     echo '<div class="alert alert-success" role="alert">
-  Author Deleted </div>';
+  Borrower Deleted </div>';
 } else {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
