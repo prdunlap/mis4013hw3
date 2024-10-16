@@ -36,7 +36,7 @@ while ($author = $authors->fetch_assoc()) {
     <td><?php echo $author['Country_of_Origin']; ?></td>
     <td></td>
     <td><form action="" method="POST">
-        <input type="hidden" name="aid" value="<?php echo $author['AID']; ?>">
+        <input type="hidden" name="AID" value="<?php echo $author['AID']; ?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
