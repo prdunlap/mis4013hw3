@@ -10,7 +10,14 @@ if (isset($_POST['actionType'])) {
     case "Add":
     if (insertAuthors($_POST['FName'], $_POST['LName'], $_POST['Suffix'], $_POST['DOB'], $_POST['Country_of_Origin'])) {
     echo '<div class="alert alert-success" role="alert">
-  Book Added </div>';
+  Author Added </div>';
+} else {
+  echo '<div class="alert alert-danger" role="alert">Error</div>';
+    }
+    case "Delete":
+    if (insertAuthors($_POST['AID'])) {
+    echo '<div class="alert alert-success" role="alert">
+  Author Deleted </div>';
 } else {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
