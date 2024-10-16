@@ -22,7 +22,7 @@ function insertAuthors($aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin)
 
 }
 
-function updateBorrowers($aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin) 
+function updateAuthors($aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin) 
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE author SET FName = ?, LName = ?, Suffix = ?, DOB = ?, Country_of_Origin = ? WHERE AID = ?)");
@@ -33,7 +33,7 @@ function updateBorrowers($aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin)
         return $success;
 
 }
-function deleteBorrowers($AID) 
+function deleteAuthors($AID) 
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE from author WHERE AID = ?");
