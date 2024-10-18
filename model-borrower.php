@@ -13,7 +13,7 @@ function insertBorrowers($boFName, $boLName, $boDOB, $boemail, $bophone)
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO borrower (FName, LName, DOB, email, phone) VALUES (?,?,?,?,?)");
-        $stmt->bind_param("ssdsi",$boFName, $boLName, $boDOB, $boemail, $bophone);
+        $stmt->bind_param("ssssi",$boFName, $boLName, $boDOB, $boemail, $bophone);
         $success = $stmt->execute();
         $conn->close();
         
