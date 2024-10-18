@@ -34,7 +34,12 @@ while ($author = $authors->fetch_assoc()) {
     <td><?php echo $author['Suffix']; ?></td>
     <td><?php echo $author['DOB']; ?></td>
     <td><?php echo $author['Country_of_Origin']; ?></td>
-    <td></td>
+    <td>
+      <form action="author-information.php" method="POST">
+        <input type="hidden" name="AID" value="<?php echo $author['AID']; ?>">
+        <button type="submit">Books</button>    
+      </form>
+    </td>
     <td>
       <form action="" method="POST">
         <input type="hidden" name="AID" value="<?php echo $author['AID']; ?>">
@@ -47,12 +52,7 @@ while ($author = $authors->fetch_assoc()) {
         </button>    
       </form>
     </td>
-  <td>
-      <form action="author-information.php" method="POST">
-        <input type="hidden" name="AID" value="<?php echo $author['AID']; ?>">
-        <button type="submit">Books</button>    
-      </form>
-  </td>
+  
   </tr>
 <?php 
 }
