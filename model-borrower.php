@@ -24,7 +24,7 @@ function insertBorrowers($boFName, $boLName, $boDOB, $boemail, $bophone)
 function updateBorrowers($boFName, $boLName, $boDOB, $boemail, $bophone) 
      {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE book SET FName = ?, LName = ?, DOB = ?, email = ?, phone = ? WHERE BorrowerID = ?)");
+        $stmt = $conn->prepare("UPDATE borrower SET FName = ?, LName = ?, DOB = ?, email = ?, phone = ? WHERE BorrowerID = ?)");
         $stmt->bind_param("issi",$bGID, $bTitle, $bPubDate, $bLID, $bBID);
         $success = $stmt->execute();
         $conn->close();
@@ -35,7 +35,7 @@ function updateBorrowers($boFName, $boLName, $boDOB, $boemail, $bophone)
 function deleteBorrowers($BorrowerID) 
      {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE from book WHERE BorrowerID = ?");
+        $stmt = $conn->prepare("DELETE from borrower WHERE BorrowerID = ?");
         $stmt->bind_param("i",$BorrowerID);
         $success = $stmt->execute();
         $conn->close();
