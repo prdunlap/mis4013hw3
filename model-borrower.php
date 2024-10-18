@@ -36,7 +36,7 @@ function deleteBorrowers($BorrowerID)
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE from book WHERE BorrowerID = ?");
-        $stmt->bind_param("i",$BID);
+        $stmt->bind_param("i",$BorrowerID);
         $success = $stmt->execute();
         $conn->close();
         
