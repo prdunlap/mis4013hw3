@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])) {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
     case "Edit":
-    if (updateBorrowers($_POST['FName'], $_POST['LName'], $_POST['Suffix'], $_POST['DOB'], $_POST['Country_of_Origin'], $_POST['AID'])) {
+    if (updateBorrowers($_POST['FName'], $_POST['LName'], $_POST['DOB'], $_POST['email'], $_POST['phone'], $_POST['BorrowerID'])) {
     echo '<div class="alert alert-success" role="alert">
   Borrower Edited </div>';
     } else {
