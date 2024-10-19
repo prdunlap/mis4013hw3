@@ -14,6 +14,14 @@ if (isset($_POST['actionType'])) {
 } else {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
+    case "Edit":
+    if (updateBorrowers($_POST['FName'], $_POST['LName'], $_POST['Suffix'], $_POST['DOB'], $_POST['Country_of_Origin'], $_POST['AID'])) {
+    echo '<div class="alert alert-success" role="alert">
+  Borrower Edited </div>';
+    } else {
+  echo '<div class="alert alert-danger" role="alert">Error</div>';
+    }
+      break;
     case "Delete":
     if (deleteBorrowers($_POST['BorrowerID'])) {
     echo '<div class="alert alert-success" role="alert">
