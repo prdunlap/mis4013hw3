@@ -16,7 +16,7 @@ if (isset($_POST['actionType'])) {
     }
     break;
     case "Edit":
-    if (updateLoans($_POST['BorrowerID'], $_POST['CheckoutDate'], $_POST['DueDate'],$_POST['LID'])) {
+    if (updateLoans($_POST['BorrowerID'], $_POST['CheckoutDate'], $_POST['LID'])) {
     echo '<div class="alert alert-success" role="alert">
   Loan Edited </div>';
     } else {
