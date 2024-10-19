@@ -15,6 +15,23 @@ if (isset($_POST['actionType'])) {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
       break;
+    case "Edit":
+    if (updateAuthors($_POST['GID'], $_POST['Title'], $_POST['PubDate'], $_POST['LID'], $_POST['BID'])) {
+    echo '<div class="alert alert-success" role="alert">
+  Book Edited </div>';
+} else {
+  echo '<div class="alert alert-danger" role="alert">Error</div>';
+    }
+    break;
+    case "Delete":
+    if (deleteAuthors($_POST['BID'])) {
+    echo '<div class="alert alert-success" role="alert">
+  Book Deleted </div>';
+} else {
+  echo '<div class="alert alert-danger" role="alert">Error</div>';
+    }
+      break;
+  }
   }
 }
 $books = selectBooks();
