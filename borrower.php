@@ -14,6 +14,7 @@ if (isset($_POST['actionType'])) {
 } else {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
+    break;
     case "Edit":
     if (updateBorrowers($_POST['FName'], $_POST['LName'], $_POST['DOB'], $_POST['email'], $_POST['phone'], $_POST['BorrowerID'])) {
     echo '<div class="alert alert-success" role="alert">
