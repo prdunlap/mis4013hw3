@@ -27,7 +27,7 @@ function updateLoans($lBorrowerID, $lCheckoutDate, $LID)
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE loan SET BorrowerID = ?, CheckoutDate = ? WHERE LID = ?");
-        $stmt->bind_param("is",$lBorrowerID, $lCheckoutDate, $LID);
+        $stmt->bind_param("isi",$lBorrowerID, $lCheckoutDate, $LID);
         $success = $stmt->execute();
         $conn->close();
         
