@@ -21,11 +21,11 @@ function insertBorrowers($boFName, $boLName, $boDOB, $boemail, $bophone)
 
 }
 
-function updateBorrowers($boFName, $boLName, $boDOB, $boemail, $bophone) 
+function updateBorrowers($boFName, $boLName, $boDOB, $boemail, $bophone, $BorrowerID) 
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE borrower SET FName = ?, LName = ?, DOB = ?, email = ?, phone = ? WHERE BorrowerID = ?)");
-        $stmt->bind_param("issi",$bGID, $bTitle, $bPubDate, $bLID, $bBID);
+        $stmt->bind_param("sssii",$boFName, $boLName, $boDOB, $boemail, $bophone, $BorrowerID);
         $success = $stmt->execute();
         $conn->close();
         
