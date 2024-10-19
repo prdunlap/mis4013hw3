@@ -26,7 +26,7 @@ function updateAuthors($aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin, $
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE author SET FName = ?, LName = ?, Suffix = ?, DOB = ?, Country_of_Origin = ? WHERE AID = ?");
-        $stmt->bind_param("sssss",$aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin);
+        $stmt->bind_param("sssssi",$aFName, $aLName, $aSuffix, $aDOB, $aCountry_of_Origin, $AID);
         $success = $stmt->execute();
         $conn->close();
         
