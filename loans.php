@@ -8,7 +8,7 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-    if (insertLoans($_POST['BorrowerID'], $_POST['CheckoutDate'], $_POST['DueDate'])) {
+    if (insertLoans($_POST['BorrowerID'], $_POST['CheckoutDate'])) {
     echo '<div class="alert alert-success" role="alert">
   Loan Added </div>';
 } else {
