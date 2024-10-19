@@ -32,7 +32,6 @@ if (isset($_POST['actionType'])) {
     }
       break;
   }
-  }
 }
 $books = selectBooks();
 include "view-books.php";
