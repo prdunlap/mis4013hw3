@@ -14,8 +14,8 @@ function selectLoans()
 function insertLoans($lBorrowerID, $lCheckoutDate) 
      {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO author (BorrowerID, CheckoutDate) VALUES (?,?)");
-        $stmt->bind_param("id",$lBorrowerID, $lCheckoutDate);
+        $stmt = $conn->prepare("INSERT INTO loan (BorrowerID, CheckoutDate) VALUES (?,?)");
+        $stmt->bind_param("is",$lBorrowerID, $lCheckoutDate);
         $success = $stmt->execute();
         $conn->close();
         
@@ -23,11 +23,11 @@ function insertLoans($lBorrowerID, $lCheckoutDate)
 
 }
 
-function updateLoans($lBorrowerID, $lCheckoutDate) 
+function updateLoans($lBorrowerID, $lCheckoutDate, $LID) 
      {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE loan SET BorrowerID = ?, CheckoutDate = ? WHERE LID = ?)");
-        $stmt->bind_param("id",$lBorrowerID, $lCheckoutDate);
+        $stmt = $conn->prepare("UPDATE loan SET BorrowerID = ?, CheckoutDate = ? WHERE LID = ?");
+        $stmt->bind_param("is",$lBorrowerID, $lCheckoutDate, $LID);
         $success = $stmt->execute();
         $conn->close();
         
