@@ -25,7 +25,7 @@ function updateBorrowers($boFName, $boLName, $boDOB, $boemail, $bophone, $Borrow
      {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE borrower SET FName = ?, LName = ?, DOB = ?, email = ?, phone = ? WHERE BorrowerID = ?");
-        $stmt->bind_param("sssii",$boFName, $boLName, $boDOB, $boemail, $bophone, $BorrowerID);
+        $stmt->bind_param("ssssii",$boFName, $boLName, $boDOB, $boemail, $bophone, $BorrowerID);
         $success = $stmt->execute();
         $conn->close();
         
