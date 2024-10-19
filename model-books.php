@@ -23,11 +23,11 @@ function insertBooks($bGID, $bTitle, $bPubDate, $bLID)
 
 }
 
-function updateBooks($bGID, $bTitle, $bPubDate, $bLID, $bBID) 
+function updateBooks($bGID, $bTitle, $bPubDate, $bLID, $BID) 
      {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE book SET GID = ?, Title = ?, Pubdate = ?, LID = ? WHERE BID = ?)");
-        $stmt->bind_param("issi",$bGID, $bTitle, $bPubDate, $bLID, $bBID);
+        $stmt = $conn->prepare("UPDATE book SET GID = ?, Title = ?, Pubdate = ?, LID = ? WHERE BID = ?");
+        $stmt->bind_param("issii",$bGID, $bTitle, $bPubDate, $bLID, $BID);
         $success = $stmt->execute();
         $conn->close();
         
