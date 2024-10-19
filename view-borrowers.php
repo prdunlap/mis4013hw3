@@ -29,6 +29,9 @@ while ($borrower = $borrowers->fetch_assoc()) {
     <td><?php echo $borrower['DOB']; ?></td>
     <td><?php echo $borrower['email']; ?></td>
     <td><?php echo $borrower['phone']; ?></td> 
+    <td>
+      <?php include "view-borrowers-editform.php"; ?>
+    </td>
       <td>
           <form action="" method="POST">
           <input type="hidden" name="BorrowerID" value="<?php echo $borrower['BorrowerID']; ?>">
