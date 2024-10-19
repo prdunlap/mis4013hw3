@@ -8,7 +8,7 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-    if (updateAuthors($_POST['FName'], $_POST['LName'], $_POST['Suffix'], $_POST['DOB'], $_POST['Country_of_Origin'])) {
+    if (insertAuthors($_POST['FName'], $_POST['LName'], $_POST['Suffix'], $_POST['DOB'], $_POST['Country_of_Origin'])) {
     echo '<div class="alert alert-success" role="alert">
   Author Added </div>';
 } else {
@@ -16,7 +16,7 @@ if (isset($_POST['actionType'])) {
     }
     break;
     case "Edit":
-    if (insertAuthors($_POST['FName'], $_POST['LName'], $_POST['Suffix'], $_POST['DOB'], $_POST['Country_of_Origin'], $_POST['AID'])) {
+    if (updateAuthors($_POST['FName'], $_POST['LName'], $_POST['Suffix'], $_POST['DOB'], $_POST['Country_of_Origin'], $_POST['AID'])) {
     echo '<div class="alert alert-success" role="alert">
   Author Edited </div>';
 } else {
