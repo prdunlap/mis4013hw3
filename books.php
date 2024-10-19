@@ -16,7 +16,7 @@ if (isset($_POST['actionType'])) {
     }
       break;
     case "Edit":
-    if (updateAuthors($_POST['GID'], $_POST['Title'], $_POST['PubDate'], $_POST['LID'], $_POST['BID'])) {
+    if (updateBooks($_POST['GID'], $_POST['Title'], $_POST['PubDate'], $_POST['LID'], $_POST['BID'])) {
     echo '<div class="alert alert-success" role="alert">
   Book Edited </div>';
 } else {
@@ -24,7 +24,7 @@ if (isset($_POST['actionType'])) {
     }
     break;
     case "Delete":
-    if (deleteAuthors($_POST['BID'])) {
+    if (updateAuthors($_POST['BID'])) {
     echo '<div class="alert alert-success" role="alert">
   Book Deleted </div>';
 } else {
