@@ -20,7 +20,7 @@
               
             </div>
           <?php 
-$author = authorFormList();
+$authorList = selectAuthorFormInput();
 ?>
             <div class="mb-3">
               <label for="LName" class="form-label">Last Name</label>
