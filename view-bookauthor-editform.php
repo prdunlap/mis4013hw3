@@ -21,7 +21,7 @@
               <input type="integer" class="form-control" id="BID<?php echo $bookauthor['BID']; ?>" name="BID" value="<?php echo $bookauthor['BID']; ?>">
             </div>
             <div class="mb-3">
-              <label for="AID<?php echo $bookauthor['BAID']; ?>" class="form-label">Author Name</label>
+              <label for="AID<?php echo $bookauthor['AID']; ?>" class="form-label">Author ID</label>
               <input type="integer" class="form-control" id="AID<?php echo $bookauthor['BAID']; ?>" name="AID" value="<?php echo $bookauthor['AID']; ?>">
             </div>
             
