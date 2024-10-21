@@ -22,33 +22,11 @@
        
     }  
 
-function selectBooksFormInput() {
-     
-        $conn = get_db_connection();
-      $stmt = $conn->prepare("SELECT BID, Title FROM book ORDER BY BID");
-      $stmt->execute();
-      $result=$stmt->get_result();
-      $conn->close();
-      return $result;
-     
-      }
-
-function selectAuthorsFormInput() {
-     
-        $conn = get_db_connection();
-      $stmt = $conn->prepare("SELECT AID, FName, LNAME FROM author ORDER BY LNAME");
-      $stmt->execute();
-      $result=$stmt->get_result();
-      $conn->close();
-      return $result;
-     
-      }
-
-function insertBooks($bGID, $bTitle, $bPubDate, $bLID) 
+function insertBookAuthor($baBID, $baAID) 
      {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO book (GID, Title, Pubdate, LID) VALUES (?,?,?,?)");
-        $stmt->bind_param("issi",$bGID, $bTitle, $bPubDate, $bLID);
+        $stmt = $conn->prepare("INSERT INTO bookauthor (BID, AID) VALUES (?,?)");
+        $stmt->bind_param("ii",$baBID, $baAID);
         $success = $stmt->execute();
         $conn->close();
         
@@ -56,22 +34,22 @@ function insertBooks($bGID, $bTitle, $bPubDate, $bLID)
 
 }
 
-function updateBooks($bGID, $bTitle, $bPubDate, $bLID, $BID) 
+function updateBookAuthor($baBID, $baAID, $BAID) 
      {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE book SET GID = ?, Title = ?, Pubdate = ?, LID = ? WHERE BID = ?");
-        $stmt->bind_param("issii",$bGID, $bTitle, $bPubDate, $bLID, $BID);
+        $stmt = $conn->prepare("UPDATE bookauthor SET BID = ?, AID = ? WHERE BAID = ?");
+        $stmt->bind_param("iii",$baBID, $baAID, $BAID);
         $success = $stmt->execute();
         $conn->close();
         
         return $success;
 
 }
-function deleteBooks($BID) 
+function deleteBookAuthor($BAID) 
      {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE from book WHERE BID = ?");
-        $stmt->bind_param("i",$BID);
+        $stmt = $conn->prepare("DELETE from bookauthor WHERE BAID = ?");
+        $stmt->bind_param("i",$BAID);
         $success = $stmt->execute();
         $conn->close();
         
