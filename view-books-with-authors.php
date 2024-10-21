@@ -36,7 +36,7 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
     </td>
     <td>
       <form action="" method="POST">
-        <input type="hidden" name="BAID" value="<?php echo $bookauthor['BAID']; ?>">
+        <input type="hidden" name="BAID" value="<?php echo $bookinfos['BAID']; ?>">
         <input type="hidden" name="actionType" value="Delete" onclick="return confirm('Are you sure?');">
         <button type="submit">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
