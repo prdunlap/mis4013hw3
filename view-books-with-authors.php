@@ -22,12 +22,7 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
   while ($bookinfos = $bookinformation->fetch_assoc()) {
     ?>
    
-      <li class="list-group-item">Book ID - <?php echo $bookinfos['BID']; ?></li>
-      <li class="list-group-item">Genre ID - <?php echo $bookinfos['GID']; ?></li>
-      <li class="list-group-item">Author FName - <?php echo $bookinfos['FName']; ?></li>
-      <li class="list-group-item">Author LName - <?php echo $bookinfos['LName']; ?></li>
-      <li class="list-group-item">Author Country of Origin - <?php echo $bookinfos['Country_of_Origin']; ?></li>
-      <li class="list-group-item">Publication Date - <?php echo $bookinfos['PubDate']; ?></li>
+      <li class="list-group-item">Book ID - <?php echo $bookinfos['BID']; ?>, Genre ID - <?php echo $bookinfos['GID']; ?>, Author FName - <?php echo $bookinfos['FName']; ?>, Author LName - <?php echo $bookinfos['LName']; ?>, Author Country of Origin - <?php echo $bookinfos['Country_of_Origin']; ?>, Publication Date - <?php echo $bookinfos['PubDate']; ?></li>
      <td>
       <?php 
         include "view-bookauthor-editform.php";
