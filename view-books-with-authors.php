@@ -1,9 +1,7 @@
 <div class="row">
   <div class="col"><h1>Books with Authors</h1></div>
   <div class="col-auto">
-   <?php 
-include "view-newbookauthor-form.php";
-?>
+   
   </div> 
 </div>
 
