@@ -4,7 +4,9 @@
       <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
   </svg>  
 </button>
-
+<?php 
+  include "model-books-by-author.php";
+?>
 <!-- Modal -->
 <div class="modal fade" id="newbookauthorModal" tabindex="-1" aria-labelledby="newbookauthorModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -20,9 +22,9 @@
               
             </div>
           <?php 
-$authorList = selectAuthorFormInput();
-include "view-author-input-list.php";
-?>
+            $authorList = selectAuthorFormInput();
+            include "view-author-input-list.php";
+          ?>
             <div class="mb-3">
               <label for="FName" class="form-label">First Name</label>
               <input type="text" class="form-control" id="FName" name="FName">
