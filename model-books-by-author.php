@@ -22,6 +22,28 @@
        
     }  
 
+function selectBooksFormInput() {
+     
+        $conn = get_db_connection();
+      $stmt = $conn->prepare("SELECT BID, Title FROM book ORDER BY BID");
+      $stmt->execute();
+      $result=$stmt->get_result();
+      $conn->close();
+      return $result;
+     
+      }
+
+function selectAuthorsFormInput() {
+     
+        $conn = get_db_connection();
+      $stmt = $conn->prepare("SELECT AID, FName, LNAME FROM author ORDER BY LNAME");
+      $stmt->execute();
+      $result=$stmt->get_result();
+      $conn->close();
+      return $result;
+     
+      }
+
 function insertBooks($bGID, $bTitle, $bPubDate, $bLID) 
      {
         $conn = get_db_connection();
