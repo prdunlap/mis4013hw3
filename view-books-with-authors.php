@@ -1,4 +1,13 @@
-<h1>Author Books</h1>
+<div class="row">
+  <div class="col"><h1>Books with Authors</h1></div>
+  <div class="col-auto">
+   <?php 
+include "view-newbookauthor-form.php";
+?>
+  </div> 
+</div>
+
+
 <div class="card-group">
 <?php
 while ($bookauthor = $bookauthors->fetch_assoc()) {
