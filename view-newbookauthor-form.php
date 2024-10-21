@@ -16,12 +16,17 @@
       <div class="modal-body">
           <form method="post" action="">
             <div class="mb-3">
-              <label for="FName" class="form-label">First Name</label>
+              <label for="AID" class="form-label">Author ID</label>
               
             </div>
           <?php 
 $authorList = selectAuthorFormInput();
+include "view-author-input-list.php";
 ?>
+            <div class="mb-3">
+              <label for="FName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="FName" name="FName">
+            </div>
             <div class="mb-3">
               <label for="LName" class="form-label">Last Name</label>
               <input type="text" class="form-control" id="LName" name="LName">
