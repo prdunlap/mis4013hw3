@@ -29,7 +29,7 @@
                   } } else {
                     echo "<option value=''>No Borrowers Available</option>";
                   }
-                }
+                
 ?>
               </select>
             </div>
