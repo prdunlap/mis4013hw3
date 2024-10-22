@@ -26,7 +26,7 @@
                 if ($res->num_rows >0) {
                   while ($row = $res->fetch_assoc()) {
                     echo "<option value='". $row['BorrowerID'] . "'>" . $row['BorrowerID'] . "</option>";
-                  } else {
+                  } } else {
                     echo "<option value=''>No Borrowers Available</option>";
                   }
                 }
