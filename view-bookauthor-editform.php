@@ -6,6 +6,10 @@
     </svg>
 </button>
 
+<?php 
+include "books-with-authors.php";
+?>
+
 <!-- Modal -->
 <div class="modal fade" id="editbookauthorModal<?php echo $bookauthor['BAID']; ?>" tabindex="-1" aria-labelledby="editbookauthorModalLabel<?php echo $bookauthor['BAID']; ?>" aria-hidden="true">
   <div class="modal-dialog">
