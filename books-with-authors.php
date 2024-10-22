@@ -8,7 +8,7 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-    if (insertAuthors($_POST['FName'], $_POST['LName'], $_POST['Suffix'], $_POST['DOB'], $_POST['Country_of_Origin'])) {
+    if (insertBookAuthor($_POST['BID'], $_POST['AID'])) {
     echo '<div class="alert alert-success" role="alert">
   Author Added </div>';
 } else {
@@ -16,7 +16,7 @@ if (isset($_POST['actionType'])) {
     }
     break;
     case "Edit":
-    if (updateAuthors($_POST['FName'], $_POST['LName'], $_POST['Suffix'], $_POST['DOB'], $_POST['Country_of_Origin'], $_POST['AID'])) {
+    if (updateBookAuthor($_POST['BID'], $_POST['AID'], $_POST['BAID'])) {
     echo '<div class="alert alert-success" role="alert">
   Author Edited </div>';
 } else {
@@ -24,9 +24,9 @@ if (isset($_POST['actionType'])) {
     }
     break;
     case "Delete":
-    if (deleteAuthors($_POST['AID'])) {
+    if (deleteBookAuthor($_POST['BAID'])) {
     echo '<div class="alert alert-success" role="alert">
-  Author Deleted </div>';
+  Record Deleted in BookAuthor Table </div>';
 } else {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
