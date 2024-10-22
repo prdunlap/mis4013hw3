@@ -18,7 +18,22 @@
           <form method="post" action="">
             <div class="mb-3">
               <label for="BorrowerID<?php echo $loan['LID']; ?>" class="form-label">Borrower ID</label>
-              <input type="integer" class="form-control" id="BorrowerID<?php echo $loan['LID']; ?>" name="BorrowerID" value="<?php echo $loan['BorrowerID']; ?>">
+              <select class="form-control" id="BorrowerID" name="BorrowerID">
+              <?php
+                require_once "utility-db.php";
+
+                $bor = "SELECT BorrowerID FROM borrower";
+                $res = $conn->query($bor);
+
+                if ($res->num_rows >0) {
+                  while ($row = $res->fetch_assoc()) {
+                    echo "<option value='". $row['BorrowerID'] . "'>" . $row['BorrowerID'] . "</option>";
+                  } else {
+                    echo "<option value=''>No Borrowers Available</option>";
+                  }
+                }
+?>
+              </select>
             </div>
             <div class="mb-3">
               <label for="CheckoutDate<?php echo $loan['LID']; ?>" class="form-label">CheckoutDate</label>
