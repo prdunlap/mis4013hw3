@@ -47,7 +47,7 @@ function selectBIDs() {
   function selectBAIDs() {
      
         $conn = get_db_connection();
-      $stmt = $conn->prepare("SELECT BAID FROM bookauthor");
+      $stmt = $conn->prepare("SELECT ba.BAID, a.AID FROM bookauthor ba JOIN author a ON ba.AID = a.AID");
       $stmt->execute();
       $result=$stmt->get_result();
       $conn->close();
