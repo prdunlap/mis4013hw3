@@ -35,6 +35,7 @@ if (isset($_POST['actionType'])) {
 }
 
 $bookauthors = selectBooks();
+$ba = selectBooksbyAuthor();
 
 include "view-books-with-authors.php";
 include "view-footer.php";
