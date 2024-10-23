@@ -10,6 +10,18 @@
      
       }
 
+function selectAuthors() {
+     
+        $conn = get_db_connection();
+      $stmt = $conn->prepare("SELECT AID FROM author");
+      $stmt->execute();
+      $result=$stmt->get_result();
+      $conn->close();
+      return $result;
+     
+      }
+
+
     function selectAuthorsByBook($bid) {
       
         $conn = get_db_connection();
