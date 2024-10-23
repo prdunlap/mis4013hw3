@@ -25,9 +25,7 @@
                   if(!empty($borrs)) {
                     foreach ($borrs as $id) {
                       echo "<option value='" . $id . "'>" . $id . "</option>";
-                    } else {
-                      echo "<option value=''>No borrowers available</option>";
-                    }
+                    } 
                   }
               ?>
               </select>
