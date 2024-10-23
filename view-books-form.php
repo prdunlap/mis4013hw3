@@ -17,7 +17,17 @@
           <form method="post" action="">
             <div class="mb-3">
               <label for="GID" class="form-label">Genre ID</label>
-              <input type="integer" class="form-control" id="GID" name="GID">
+             <select class="form-control" id="GID" name="GID">
+              <?php 
+                require_once "model-books.php";
+                $gids = selectGenres();
+                  if(!empty($gids)) {
+                    foreach ($gids as $gid) {
+                      echo "<option value='" . $gid['GID'] . "'>" . $gid['GID'] . "</option>";
+                    } 
+                  }
+              ?>
+              </select>
             </div>
             <div class="mb-3">
               <label for="Title" class="form-label">Book Title</label>
@@ -29,7 +39,17 @@
             </div>
             <div class="mb-3">
               <label for="LID" class="form-label">Loan ID</label>
-              <input type="integer" class="form-control" id="LID" name="LID">
+             <select class="form-control" id="LID" name="LID">
+              <?php 
+                require_once "model-books.php";
+                $lids = selectLoans();
+                  if(!empty($lids)) {
+                    foreach ($lids as $loanid) {
+                      echo "<option value='" . $loanid['LID'] . "'>" . $loanid['LID'] . "</option>";
+                    } 
+                  }
+              ?>
+              </select>
             </div>
             <input type="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
