@@ -11,6 +11,26 @@ function selectBooks()
 
 }
 
+function selectGenres() {
+     $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT GID FROM genre");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        
+        return $result;
+}
+
+function selectLoans() {
+     $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT LID FROM loan");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        
+        return $result;
+}
+
 function insertBooks($bGID, $bTitle, $bPubDate, $bLID) 
      {
         $conn = get_db_connection();
