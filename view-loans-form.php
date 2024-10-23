@@ -4,6 +4,8 @@
   </svg>  
 </button>
 
+
+
 <!-- Modal -->
 <div class="modal fade" id="newloanModal" tabindex="-1" aria-labelledby="newloanModelLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -16,7 +18,19 @@
           <form method="post" action="">
             <div class="mb-3">
               <label for="BorrowerID" class="form-label">Borrower ID</label>
-              <input type="integer" class="form-control" id="BorrowerID" name="BorrowerID">
+              <select class="form-control" id="BorrowerID" name="BorrowerID">
+              <?php 
+                require_once "model-loans.php";
+                $borrs = selectBorrowerID();
+                  if(!empty($borrs)) {
+                    foreach ($borrs as $id) {
+                      echo "<option value='" . $id . "'>" . $id . "</option>";
+                    } else {
+                      echo "<option value=''>No borrowers available</option>";
+                    }
+                  }
+              ?>
+              </select>
             </div>
             <div class="mb-3">
               <label for="CheckoutDate" class="form-label">Checkout Date</label>
