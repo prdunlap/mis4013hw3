@@ -42,7 +42,8 @@
                     } 
                   }
               ?>
-              </select>            </div>
+              </select>
+            </div>
             
             <input type="hidden" name="BAID" value="<?php echo $bookauthor['BAID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
