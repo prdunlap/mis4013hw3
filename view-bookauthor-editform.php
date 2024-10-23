@@ -18,12 +18,31 @@
           <form method="post" action="">
             <div class="mb-3">
               <label for="BID<?php echo $bookauthor['BID']; ?>" class="form-label">Book ID</label>
-              <input type="integer" class="form-control" id="BID<?php echo $bookauthor['BID']; ?>" name="BID" value="<?php echo $bookauthor['BID']; ?>">
+              <select class="form-control" id="BID" name="BID">
+              <?php 
+                require_once "model-books-by-author.php";
+                $gids = selectBIDs();
+                  if(!empty($bids)) {
+                    foreach ($bids as $bookid) {
+                      echo "<option value='" . $bookid['BID'] . "'>" . $bookid['BID'] . "</option>";
+                    } 
+                  }
+              ?>
+              </select>
             </div>
             <div class="mb-3">
               <label for="AID<?php echo $bookauthor['AID']; ?>" class="form-label">Author ID</label>
-              <input type="integer" class="form-control" id="AID<?php echo $bookauthor['BAID']; ?>" name="AID" value="<?php echo $bookauthor['AID']; ?>">
-            </div>
+               <select class="form-control" id="BID" name="BID">
+              <?php 
+                require_once "model-books-by-author.php";
+                $gids = selectAuthors();
+                  if(!empty($aids)) {
+                    foreach ($aids as $authorid) {
+                      echo "<option value='" . $authorid['AID'] . "'>" . $authorid['AID'] . "</option>";
+                    } 
+                  }
+              ?>
+              </select>            </div>
             
             <input type="hidden" name="BAID" value="<?php echo $bookauthor['BAID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
