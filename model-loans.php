@@ -11,6 +11,16 @@ function selectLoans()
 
 }
 
+function selectBorrowerID() {
+     $conn = get_db_connection();
+     $stmt = $conn->prepare("SELECT BorrowerID FROM borrower");
+     $stmt->execute();
+     $result = $stmt->get_result();
+     $conn->close();
+
+     return $result;
+}
+
 function insertLoans($lBorrowerID, $lCheckoutDate) 
      {
         $conn = get_db_connection();
