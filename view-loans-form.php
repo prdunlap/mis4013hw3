@@ -24,7 +24,7 @@
                 $borrs = selectBorrowerID();
                   if(!empty($borrs)) {
                     foreach ($borrs as $id) {
-                      echo "<option value='" . $borrs['BorrowerID'] . "'>" . $borrs['BorrowerID'] . "</option>";
+                      echo "<option value='" . $id['BorrowerID'] . "'>" . $id['BorrowerID'] . "</option>";
                     } 
                   }
               ?>
