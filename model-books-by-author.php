@@ -44,6 +44,17 @@ function selectBIDs() {
        
     }  
 
+  function selectBAIDs() {
+     
+        $conn = get_db_connection();
+      $stmt = $conn->prepare("SELECT BAID FROM bookauthor");
+      $stmt->execute();
+      $result=$stmt->get_result();
+      $conn->close();
+      return $result;
+     
+      }
+
 function insertBookAuthor($baBID, $baAID) 
      {
         $conn = get_db_connection();
