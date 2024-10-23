@@ -21,6 +21,16 @@ function selectAuthors() {
      
       }
 
+function selectBIDs() {
+     
+        $conn = get_db_connection();
+      $stmt = $conn->prepare("SELECT BID FROM book");
+      $stmt->execute();
+      $result=$stmt->get_result();
+      $conn->close();
+      return $result;
+     
+      }
 
     function selectAuthorsByBook($bid) {
       
