@@ -16,11 +16,31 @@
           <form method="post" action="">
             <div class="mb-3">
               <label for="BID" class="form-label">Book ID</label>
-              <input type="integer" class="form-control" id="BID" name="BID">
+              <select class="form-control" id="BID" name="BID">
+              <?php 
+                require_once "model-books-by-author.php";
+                $gids = selectBIDs();
+                  if(!empty($bids)) {
+                    foreach ($bids as $bookid) {
+                      echo "<option value='" . $bookid['BID'] . "'>" . $bookid['BID'] . "</option>";
+                    } 
+                  }
+              ?>
+              </select>
             </div>
             <div class="mb-3">
               <label for="AID" class="form-label">Author ID</label>
-              <input type="integer" class="form-control" id="AID" name="AID">
+              <select class="form-control" id="AID" name="AID">
+              <?php 
+                require_once "model-books-by-author.php";
+                $gids = selectAuthors();
+                  if(!empty($aids)) {
+                    foreach ($aids as $authorid) {
+                      echo "<option value='" . $authorid['AID'] . "'>" . $authorid['AID'] . "</option>";
+                    } 
+                  }
+              ?>
+              </select>
             </div>
             <input type="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
