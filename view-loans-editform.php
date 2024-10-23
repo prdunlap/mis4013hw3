@@ -18,7 +18,16 @@
           <form method="post" action="">
             <div class="mb-3">
               <label for="BorrowerID<?php echo $loan['LID']; ?>" class="form-label">Borrower ID</label>
-              <input type="integer" class="form-control" id="BorrowerID" name="BorrowerID">
+                  <select class="form-control" id="BorrowerID" name="BorrowerID">
+              <?php 
+                require_once "model-loans.php";
+                $borrs = selectBorrowerID();
+                  if(!empty($borrs)) {
+                    foreach ($borrs as $id) {
+                      echo "<option value='" . htmlspecialchars($id) . "'>" . htmlspecialchars($id) . "</option>";
+                    } 
+                  }
+              ?>
               </select>
             </div>
             <div class="mb-3">
