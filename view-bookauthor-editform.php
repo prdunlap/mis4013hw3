@@ -32,7 +32,7 @@
             </div>
             <div class="mb-3">
               <label for="AID<?php echo $bookauthor['AID']; ?>" class="form-label">Author ID</label>
-               <select class="form-control" id="BID" name="BID">
+               <select class="form-control" id="AID" name="AID">
               <?php 
                 require_once "model-books-by-author.php";
                 $gids = selectAuthors();
