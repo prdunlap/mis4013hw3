@@ -1,8 +1,9 @@
 <?php
 $pageTitle = "home";
 
-include "view-footer.php";
+include "view-header.php";
 ?>
+
 <style>
   #myChart {
     max-width: 500px;
@@ -49,7 +50,6 @@ include "view-footer.php";
   });
 </script>
 
-
 <?php
-include "view-header.php";
+include "view-footer.php";
 ?>
