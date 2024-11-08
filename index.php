@@ -4,6 +4,18 @@ $pageTitle = "home";
 include "view-header.php";
 ?>
 
+<div class="description">
+  <h2>Welcome to the Frontier Library System Database!</h2>
+  <P>This website is designed so that you can add to, edit, or otherwise alter records in the database on the Frontier Library System's Database.</P>
+</div>
+
+.description {
+padding: 20px;
+text-align: center;
+background-color: #f3f4f6;
+}
+
+
 <style>
   #myChart {
     max-width: 500px;
