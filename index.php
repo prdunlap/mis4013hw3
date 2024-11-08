@@ -9,12 +9,6 @@ include "view-header.php";
   <P>This website is designed so that you can add to, edit, or otherwise alter records in the database on the Frontier Library System's Database.</P>
 </div>
 
-.description {
-padding: 20px;
-text-align: center;
-background-color: #f3f4f6;
-}
-
 
 <style>
   #myChart {
@@ -22,6 +16,11 @@ background-color: #f3f4f6;
     max-height: 500px;
     width: 100px;
     height: auto;
+  }
+  #description {
+    padding: 20px;
+    text-align: center;
+    background-color: #f3f4f6;
   }
 </style>
   
