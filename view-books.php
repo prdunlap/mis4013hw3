@@ -1,5 +1,8 @@
 <div class="row">
   <div class="col"><h1>Books</h1></div>
+  <div class="description">
+  <P>This page contains information on all books in the database. Feel free to add books, remove books, edit current books, and so on.</P>
+</div>
   <div class="col-auto">
    <?php 
 include "view-books-form.php";
