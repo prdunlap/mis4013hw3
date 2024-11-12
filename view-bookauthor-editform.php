@@ -17,8 +17,17 @@
       <div class="modal-body">
           <form method="post" action="">
             <div class="mb-3">
-              <label for="BID<?php echo $bookauthor['BID']; ?>" class="form-label">Book ID</label>
-              <input type="integer" class="form-control" id="BID" name="BID">
+              <label for="BID" class="form-label">Book ID</label>
+              <select class="form-control" id="BID" name="BID">
+                <?php 
+                  require_once "model-books-by-author.php";
+                  $bookids = selectBIDs();
+                  if(!empty($bookids)) {
+                    foreach ($bookids as $id) {
+                      echo "<option value='" . $id['BID'] . "'>" . $id['BID'] . "</option>";
+                    }
+                  }
+                ?>
             </div>
             <div class="mb-3">
               <label for="AID<?php echo $bookauthor['AID']; ?>" class="form-label">Author ID</label>
