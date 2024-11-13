@@ -7,10 +7,6 @@
   </div> 
 </div>
 
-.fixed-width-btn {
-  width: 64px;
-}
-
 
 <div class="card-group">
 <?php
