@@ -31,7 +31,17 @@
             </div>
             <div class="mb-3">
               <label for="AID<?php echo $bookauthor['AID']; ?>" class="form-label">Author ID</label>
-               <input type="integer" class="form-control" id="AID" name="AID">
+              <select class="form-control" id="AID" name="AID">
+              <?php 
+                require_once "model-books-by-author.php";
+                $authids = selectAuthors();
+                  if(!empty($authids)) {
+                    foreach ($authids as $id) {
+                      echo "<option value='" . $id['AID'] . "'>" . $id['AID'] . "</option>";
+                    } 
+                  }
+              ?>
+              </select>
             </div>
             
             <input type="hidden" name="BAID" value="<?php echo $bookauthor['BAID']; ?>">
