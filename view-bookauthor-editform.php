@@ -28,6 +28,7 @@
                     }
                   }
                 ?>
+              </select>
             </div>
             <div class="mb-3">
               <label for="AID<?php echo $bookauthor['AID']; ?>" class="form-label">Author ID</label>
