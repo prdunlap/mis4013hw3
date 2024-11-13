@@ -22,14 +22,17 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
   while ($bookinfos = $bookinformation->fetch_assoc()) {
     ?>
    
-      <li class="list-group-item">Book ID - <?php echo $bookinfos['BID']; ?>, Genre ID - <?php echo $bookinfos['GID']; ?>, Author FName - <?php echo $bookinfos['FName']; ?>, Author LName - <?php echo $bookinfos['LName']; ?>, Author Country of Origin - <?php echo $bookinfos['Country_of_Origin']; ?>, Publication Date - <?php echo $bookinfos['PubDate']; ?></li>
-     <td>
+      <li class="list-group-item">
+        <div class="row"><div class="col">
+          Book ID - <?php echo $bookinfos['BID']; ?>, Genre ID - <?php echo $bookinfos['GID']; ?>, Author FName - <?php echo $bookinfos['FName']; ?>, Author LName - <?php echo $bookinfos['LName']; ?>, Author Country of Origin - <?php echo $bookinfos['Country_of_Origin']; ?>, Publication Date - <?php echo $bookinfos['PubDate']; ?>
+        </div></div>
+        <div class="row">
+          <div class="col">
       <?php 
         include "view-bookauthor-editform.php";
       ?>  
-      
-    </td>
-    <td>
+          </div>
+          <div class="col">
       <form action="" method="POST">
         <input type="hidden" name="BAID" value="<?php echo $bookinfos['BAID']; ?>">
         <input type="hidden" name="actionType" value="Delete" onclick="return confirm('Are you sure?');">
@@ -40,7 +43,11 @@ while ($bookauthor = $bookauthors->fetch_assoc()) {
           </svg>
         </button>    
       </form>
-    </td>
+          </div>
+        </div>
+      </li>
+
+
       <?php  
   }
   ?>
