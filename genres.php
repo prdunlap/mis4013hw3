@@ -34,7 +34,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$borrowers = selectBorrowers();
-include "view-borrowers.php";
+$genres = selectGenres();
+include "view-genres.php";
 include "view-footer.php";
 ?>
