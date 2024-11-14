@@ -34,6 +34,9 @@
         <li class="nav-item">
           <a class="nav-link" href="books.php">Books</a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="genres.php">Genres</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="authors.php">Authors</a>
         </li>
@@ -43,9 +46,10 @@
         <li class="nav-item">
           <a class="nav-link" href="author-information.php">Author Information</a>
         </li>
-         <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="books-with-authors.php">Book Information</a>
         </li>
+        
       </ul>
     </div>
   </div>
