@@ -10,7 +10,7 @@ if (isset($_POST['actionType'])) {
     case "Add":
     if (insertGenres($_POST['GenreName'])) {
     echo '<div class="alert alert-success" role="alert">
-  Borrower Added </div>';
+  Genre Added </div>';
 } else {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
@@ -18,7 +18,7 @@ if (isset($_POST['actionType'])) {
     case "Edit":
     if (updateGenres($_POST['GenreName'])) {
     echo '<div class="alert alert-success" role="alert">
-  Borrower Edited </div>';
+  Genre Edited </div>';
     } else {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
@@ -26,7 +26,7 @@ if (isset($_POST['actionType'])) {
     case "Delete":
     if (deleteGenres($_POST['GID'])) {
     echo '<div class="alert alert-success" role="alert">
-  Borrower Deleted </div>';
+  Genre Deleted </div>';
 } else {
   echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
