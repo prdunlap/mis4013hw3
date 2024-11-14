@@ -17,7 +17,7 @@ include "view-genres-form.php";
     </thead>
     <tbody>  
 <?php
-while ($genre = $authors->fetch_assoc()) {
+while ($genre = $genres->fetch_assoc()) {
 ?> 
   <tr>
     <td><?php echo $genre['GID']; ?></td>
