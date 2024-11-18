@@ -1,5 +1,8 @@
 <div class="row">
   <div class="col"><h1>Authors</h1></div>
+  <div class="description">
+  <p>This is where you can edit author information, add new authors to the database, or remove authors as needed. Bear in mind that this table is used as foreign keys so we can have author information</p>
+  </div>
   <div class="col-auto">
    <?php 
 include "view-authors-form.php";
