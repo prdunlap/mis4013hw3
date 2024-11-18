@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col"><h1>Genres</h1></div>
   <div class="description">
-  <P>This page contains information on all books in the database. Feel free to add books, remove books, edit current books, and so on.</P>
+  <P>This page contains information on all genres in the database. Feel free to add genres, remove genres, edit current genres, and so on.</P>
 </div>
   <div class="col-auto">
    <?php 
