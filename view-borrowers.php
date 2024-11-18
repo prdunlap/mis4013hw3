@@ -1,5 +1,8 @@
 <div class="row">
   <div class="col"><h1>Borrowers</h1></div>
+  <div>
+    <p>This table is where all Borrower information is stored. We can access a library member's contact information and their home address to send notices of late books</p>
+  </div>
   <div class="col-auto">
    <?php 
 include "view-borrowers-form.php";
