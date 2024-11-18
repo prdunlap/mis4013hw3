@@ -2,6 +2,7 @@
 $pageTitle = "home";
 
 include "view-header.php";
+require_once "model-loans.php";
 ?>
 
 <div class="description">
@@ -29,7 +30,7 @@ include "view-header.php";
 <script>
   const ctx = document.getElementById('myChart').getContext('2d');
   const myChart = new Chart(ctx, {
-    type: 'pie',
+    type: 'bar',
     data: {
       labels: [],
       datasets: [{
