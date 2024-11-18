@@ -1,5 +1,8 @@
 <div class="row">
   <div class="col"><h1>Loans</h1></div>
+  <div>
+    <p>The loans table contains all information for each individual loan that is currently in the table, or past loans as well. It should include any books on loan along with the Borrower's ID</p>
+  </div>
   <div class="col-auto">
    <?php 
 include "view-loans-form.php";
